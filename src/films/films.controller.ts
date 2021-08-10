@@ -13,7 +13,7 @@ export class FilmsController {
             <h2>${userGoal}</h2>
             </section>
             
-            <form action="/store-goal" method="POST">
+            <form action="/films/store-goal" method="POST">
             <input type="text" name="goal"/>
             <button type="submit">submit</button>
             </form>
@@ -26,6 +26,6 @@ export class FilmsController {
         const enteredGoal = req.body.goal;
         console.log(enteredGoal);
         userGoal = enteredGoal;
-        res.redirect('/');
+        res.redirect('/films');
     }
 }
